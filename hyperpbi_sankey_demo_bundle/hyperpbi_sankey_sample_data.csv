@@ -1,0 +1,85 @@
+﻿source,target,flowCount,region,stageGroup
+SSO Report,Triage,42,North,Intake
+SSO Report,Triage,35,South,Intake
+SSO Report,Triage,28,East,Intake
+SSO Report,Triage,31,West,Intake
+311 Request,Triage,55,North,Intake
+311 Request,Triage,48,South,Intake
+311 Request,Triage,39,East,Intake
+311 Request,Triage,44,West,Intake
+Preventive Program,Triage,36,North,Intake
+Preventive Program,Triage,30,South,Intake
+Preventive Program,Triage,33,East,Intake
+Preventive Program,Triage,29,West,Intake
+Triage,CCTV Inspection,92,North,Assessment
+Triage,CCTV Inspection,80,South,Assessment
+Triage,CCTV Inspection,73,East,Assessment
+Triage,CCTV Inspection,79,West,Assessment
+Triage,Field Assessment,41,North,Assessment
+Triage,Field Assessment,33,South,Assessment
+Triage,Field Assessment,27,East,Assessment
+Triage,Field Assessment,31,West,Assessment
+CCTV Inspection,Cleaning,34,North,Action
+CCTV Inspection,Cleaning,29,South,Action
+CCTV Inspection,Cleaning,26,East,Action
+CCTV Inspection,Cleaning,28,West,Action
+CCTV Inspection,Point Repair,22,North,Action
+CCTV Inspection,Point Repair,18,South,Action
+CCTV Inspection,Point Repair,16,East,Action
+CCTV Inspection,Point Repair,19,West,Action
+CCTV Inspection,Rehabilitation,25,North,Action
+CCTV Inspection,Rehabilitation,21,South,Action
+CCTV Inspection,Rehabilitation,18,East,Action
+CCTV Inspection,Rehabilitation,20,West,Action
+CCTV Inspection,No Action,11,North,Action
+CCTV Inspection,No Action,12,South,Action
+CCTV Inspection,No Action,13,East,Action
+CCTV Inspection,No Action,12,West,Action
+Field Assessment,Cleaning,13,North,Action
+Field Assessment,Cleaning,10,South,Action
+Field Assessment,Cleaning,8,East,Action
+Field Assessment,Cleaning,9,West,Action
+Field Assessment,Point Repair,10,North,Action
+Field Assessment,Point Repair,8,South,Action
+Field Assessment,Point Repair,7,East,Action
+Field Assessment,Point Repair,8,West,Action
+Field Assessment,Rehabilitation,9,North,Action
+Field Assessment,Rehabilitation,7,South,Action
+Field Assessment,Rehabilitation,6,East,Action
+Field Assessment,Rehabilitation,7,West,Action
+Field Assessment,No Action,9,North,Action
+Field Assessment,No Action,8,South,Action
+Field Assessment,No Action,6,East,Action
+Field Assessment,No Action,7,West,Action
+Cleaning,Completed,40,North,Outcome
+Cleaning,Completed,34,South,Outcome
+Cleaning,Completed,29,East,Outcome
+Cleaning,Completed,32,West,Outcome
+Cleaning,Follow-up Needed,7,North,Outcome
+Cleaning,Follow-up Needed,5,South,Outcome
+Cleaning,Follow-up Needed,5,East,Outcome
+Cleaning,Follow-up Needed,5,West,Outcome
+Point Repair,Completed,28,North,Outcome
+Point Repair,Completed,23,South,Outcome
+Point Repair,Completed,20,East,Outcome
+Point Repair,Completed,24,West,Outcome
+Point Repair,Follow-up Needed,4,North,Outcome
+Point Repair,Follow-up Needed,3,South,Outcome
+Point Repair,Follow-up Needed,3,East,Outcome
+Point Repair,Follow-up Needed,3,West,Outcome
+Rehabilitation,Completed,29,North,Outcome
+Rehabilitation,Completed,24,South,Outcome
+Rehabilitation,Completed,21,East,Outcome
+Rehabilitation,Completed,23,West,Outcome
+Rehabilitation,Follow-up Needed,5,North,Outcome
+Rehabilitation,Follow-up Needed,4,South,Outcome
+Rehabilitation,Follow-up Needed,3,East,Outcome
+Rehabilitation,Follow-up Needed,4,West,Outcome
+No Action,Closed,20,North,Outcome
+No Action,Closed,20,South,Outcome
+No Action,Closed,19,East,Outcome
+No Action,Closed,19,West,Outcome
+Follow-up Needed,Closed,16,North,Closure
+Follow-up Needed,Closed,12,South,Closure
+Follow-up Needed,Closed,11,East,Closure
+Follow-up Needed,Closed,12,West,Closure

@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "title": "Wastewater Work Order Sankey Demo",
+  "theme": {
+    "mode": "light",
+    "density": "normal",
+    "radius": 10,
+    "cardPadding": 16,
+    "gap": 12
+  },
+  "components": [
+    {
+      "type": "sankeyChart",
+      "id": "workOrderFlowSankey",
+      "title": "Wastewater Work Order Flow",
+      "subtitle": "Weighted flow from intake through assessment, recommended action, and final outcome",
+      "span": 12,
+      "className": "hp-sankey-demo",
+      "hidden": false,
+      "style": {
+        "minWidth": 0
+      },
+      "css": ".hp-sankey-demo { min-width: 0; }",
+      "ariaLabel": "Sankey chart showing wastewater work orders flowing from intake sources through triage, assessment, recommended actions, and outcomes.",
+      "interaction": {
+        "enabled": true,
+        "trigger": "auto",
+        "internalMode": "highlight",
+        "internalScope": "self",
+        "externalMode": "auto",
+        "selectionMode": "replace",
+        "multiSelect": true,
+        "showSelector": false,
+        "clearOnSecondClick": true
+      },
+      "sourceField": "source",
+      "targetField": "target",
+      "valueField": "flowCount",
+      "aggregation": "sum",
+      "orientation": "horizontal",
+      "nodeAlign": "justify",
+      "height": 480,
+      "maxDataRows": 30000,
+      "initOptions": {
+        "renderer": "canvas",
+        "useDirtyRect": false
+      },
+      "setOption": {
+        "notMerge": true,
+        "lazyUpdate": false,
+        "silent": false
+      },
+      "options": {
+        "animation": true,
+        "animationDuration": 700,
+        "animationDurationUpdate": 400,
+        "tooltip": {
+          "trigger": "item"
+        },
+        "series": [
+          {
+            "type": "sankey",
+            "nodeWidth": 22,
+            "nodeGap": 14,
+            "layoutIterations": 32,
+            "draggable": true,
+            "label": {
+              "show": true,
+              "position": "right",
+              "overflow": "truncate"
+            },
+            "lineStyle": {
+              "opacity": 0.45,
+              "curveness": 0.5
+            },
+            "emphasis": {
+              "focus": "adjacency"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
