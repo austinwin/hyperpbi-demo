@@ -1,49 +1,83 @@
 {
   "version": "2.0",
-  "title": "Wastewater Work Order Sankey Demo",
   "theme": {
-    "mode": "light",
-    "density": "normal",
-    "radius": 10,
-    "cardPadding": 16,
-    "gap": 12
+    "mode": "auto",
+    "density": "compact",
+    "radius": 0,
+    "cardPadding": 0,
+    "gap": 0
   },
+  "layout": {
+    "type": "grid",
+    "columns": 12,
+    "gap": 0
+  },
+  "css": ".hp-shell { width: 100%; height: 100%; min-width: 0; min-height: 0; overflow: hidden; } .hp-main { width: 100%; height: 100%; min-width: 0; min-height: 0; padding: 0 !important; display: flex; flex-direction: column; overflow: hidden; } .hp-main > .hp-grid { flex: 1 1 auto; width: 100%; height: 100%; min-width: 0; min-height: 0; gap: 0 !important; grid-template-rows: minmax(0, 1fr); align-items: stretch; overflow: hidden; } [data-hp-id=\"workOrderFlowSankey\"] { width: 100%; height: 100%; min-width: 0; min-height: 0; align-self: stretch; overflow: hidden; } [data-hp-id=\"workOrderFlowSankey\"] > .hp-card { width: 100%; height: 100%; min-width: 0; min-height: 0; margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; background: transparent; display: grid; grid-template-rows: minmax(0, 1fr); overflow: hidden; } [data-hp-id=\"workOrderFlowSankey\"] > .hp-card > .hp-card-header { display: none !important; } [data-hp-id=\"workOrderFlowSankey\"] > .hp-card > .hp-card-body { position: relative; width: 100%; height: 100%; min-width: 0; min-height: 0; margin: 0; padding: 0 !important; overflow: hidden; } [data-hp-id=\"workOrderFlowSankey\"] .hp-chart-canvas.is-fill { position: absolute; inset: 0; width: 100% !important; height: 100% !important; min-width: 0; min-height: 0; } [data-hp-id=\"workOrderFlowSankey\"] .hp-chart-warnings { display: none !important; }",
   "components": [
     {
       "type": "sankeyChart",
       "id": "workOrderFlowSankey",
-      "title": "Wastewater Work Order Flow",
-      "subtitle": "Weighted flow from intake through assessment, recommended action, and final outcome",
       "span": 12,
-      "className": "hp-sankey-demo",
+      "order": 1,
+      "responsive": {
+        "xs": {
+          "span": 12,
+          "order": 1,
+          "visible": true
+        },
+        "sm": {
+          "span": 12,
+          "order": 1,
+          "visible": true
+        },
+        "md": {
+          "span": 12,
+          "order": 1,
+          "visible": true
+        },
+        "lg": {
+          "span": 12,
+          "order": 1,
+          "visible": true
+        },
+        "xl": {
+          "span": 12,
+          "order": 1,
+          "visible": true
+        }
+      },
+      "heightMode": "fill",
+      "className": "hp-sankey-full-bleed",
       "hidden": false,
       "style": {
+        "width": "100%",
+        "height": "100%",
         "minWidth": 0
       },
-      "css": ".hp-sankey-demo { min-width: 0; }",
-      "ariaLabel": "Sankey chart showing wastewater work orders flowing from intake sources through triage, assessment, recommended actions, and outcomes.",
-      "interaction": {
-        "enabled": true,
-        "trigger": "auto",
-        "internalMode": "highlight",
-        "internalScope": "self",
-        "externalMode": "auto",
-        "selectionMode": "replace",
-        "multiSelect": true,
-        "showSelector": false,
-        "clearOnSecondClick": true
-      },
+      "ariaLabel": "Interactive Sankey chart showing wastewater work orders flowing from intake through assessment, recommended action, and final outcome. Clicking a node or flow selects the contributing Power BI records and interacts with other report visuals.",
+"interaction": {
+  "enabled": true,
+  "trigger": "click",
+  "internalMode": "highlight",
+  "internalScope": "all",
+  "externalMode": "filter",
+  "field": "source",
+  "operator": "in",
+  "selectionMode": "replace",
+  "multiSelect": true,
+  "showSelector": false,
+  "clearOnSecondClick": true
+},
       "sourceField": "source",
       "targetField": "target",
       "valueField": "flowCount",
       "aggregation": "sum",
       "orientation": "horizontal",
       "nodeAlign": "justify",
-      "height": 480,
       "maxDataRows": 30000,
       "initOptions": {
         "renderer": "canvas",
-        "useDirtyRect": false
+        "useDirtyRect": true
       },
       "setOption": {
         "notMerge": true,
@@ -52,29 +86,88 @@
       },
       "options": {
         "animation": true,
-        "animationDuration": 700,
-        "animationDurationUpdate": 400,
+        "animationDuration": 500,
+        "animationDurationUpdate": 250,
         "tooltip": {
-          "trigger": "item"
+          "show": true,
+          "trigger": "item",
+          "confine": true
         },
         "series": [
           {
-            "type": "sankey",
-            "nodeWidth": 22,
-            "nodeGap": 14,
+            "left": 2,
+            "right": 2,
+            "top": 2,
+            "bottom": 2,
+            "nodeWidth": 20,
+            "nodeGap": 10,
             "layoutIterations": 32,
             "draggable": true,
             "label": {
               "show": true,
               "position": "right",
+              "distance": 6,
+              "width": 110,
               "overflow": "truncate"
             },
+            "levels": [
+              {
+                "depth": 0,
+                "label": {
+                  "position": "right",
+                  "align": "left"
+                }
+              },
+              {
+                "depth": 1,
+                "label": {
+                  "position": "right",
+                  "align": "left"
+                }
+              },
+              {
+                "depth": 2,
+                "label": {
+                  "position": "right",
+                  "align": "left"
+                }
+              },
+              {
+                "depth": 3,
+                "label": {
+                  "position": "right",
+                  "align": "left"
+                }
+              },
+              {
+                "depth": 4,
+                "label": {
+                  "position": "left",
+                  "align": "right"
+                }
+              },
+              {
+                "depth": 5,
+                "label": {
+                  "position": "left",
+                  "align": "right"
+                }
+              }
+            ],
+            "itemStyle": {
+              "borderWidth": 1,
+              "borderColor": "rgba(0,0,0,0.16)"
+            },
             "lineStyle": {
-              "opacity": 0.45,
+              "color": "gradient",
+              "opacity": 0.48,
               "curveness": 0.5
             },
             "emphasis": {
-              "focus": "adjacency"
+              "focus": "adjacency",
+              "lineStyle": {
+                "opacity": 0.78
+              }
             }
           }
         ]
