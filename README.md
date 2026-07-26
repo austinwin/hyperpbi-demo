@@ -3,3 +3,5 @@
 
 1.[Sankey Chart - External Interaction](./Sankey)  <img src="./Sankey/image.png" width="30" height="30" align="center" />  
 2.[Banking dashboard](./digital-banking) <img src="./digital-banking/image.png" width="30" height="30" align="center" />  
+3.[Industry Network Telemetry](./Industrial-Network-Telemetry)  
+4.[Enterprise-dashboard](./enterprise-dashboard)
